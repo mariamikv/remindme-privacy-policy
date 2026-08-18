@@ -5,96 +5,137 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Tick</title>
 <style>
-  :root { color-scheme: light dark; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 2rem 1.25rem 4rem;
-    color: #1a1a1a;
-    background: #ffffff;
+  :root {
+    --bg: #F4F4F3;
+    --surface: #FAFAF9;
+    --sheet: #FFFFFF;
+    --variant: #E5E5E2;
+    --text: #0E0E0F;
+    --muted: #6B6B68;
+    --line: #E5E5E2;
+    --accent: #2F6F4E;
+    color-scheme: light dark;
   }
   @media (prefers-color-scheme: dark) {
-    body { color: #e6e6e6; background: #121212; }
-    a { color: #8ab4f8; }
+    :root {
+      --bg: #0E0E0F;
+      --surface: #161618;
+      --sheet: #131315;
+      --variant: #252528;
+      --text: #FAFAF9;
+      --muted: #9A9A97;
+      --line: #252528;
+      --accent: #5FB98A;
+    }
   }
-  h1 { font-size: 1.9rem; margin-bottom: 0.25rem; }
-  h2 { font-size: 1.25rem; margin-top: 2rem; }
-  .updated { color: #666; font-size: 0.9rem; margin-top: 0; }
-  a { color: #1a73e8; }
-  footer { margin-top: 3rem; font-size: 0.85rem; color: #777; }
+  html, body { margin: 0; background: var(--bg); }
+  body {
+    color: var(--text);
+    font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { opacity: 0.7; }
+  .icon {
+    width: 64px; height: 64px; flex: none; border-radius: 16px;
+    border: 1px solid var(--line);
+    object-fit: cover;
+  }
+  h2 {
+    margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--muted);
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  section { display: flex; flex-direction: column; gap: 12px; }
+  p { margin: 0; font-size: 16.5px; text-wrap: pretty; }
+  strong { font-weight: 600; }
 </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p class="updated">Tick · Last updated: 7 July 2026</p>
+<div style="min-height: 100vh;">
 
-  <p>
-    This Privacy Policy explains how the <strong>Tick</strong> app
-    (package name <code>dev.mariam.schedulereminder</code>, the &ldquo;App&rdquo;)
-    handles your information. Your privacy matters. In short:
-    <strong>the App collects no personal data and works entirely offline.</strong>
-  </p>
+  <div style="background: var(--variant); border-bottom: 1px solid var(--line);">
+    <div style="max-width: 760px; margin: 0 auto; padding: 64px 24px 88px; display: flex; flex-direction: column; gap: 28px;">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <img class="icon" src="assets/tick-icon.png" alt="Tick app icon">
+        <span style="font-size: 20px; font-weight: 600; letter-spacing: -0.01em;">Tick</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <h1 style="margin: 0; font-size: clamp(38px, 7vw, 56px); font-weight: 600; letter-spacing: -0.035em; line-height: 1.02;">Privacy Policy</h1>
+        <p style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);">Last updated 18 August 2026</p>
+      </div>
+    </div>
+  </div>
 
-  <h2>Information we collect</h2>
-  <p>
-    We do <strong>not</strong> collect, store, transmit, or share any personal
-    information. The App has no account system, no sign-in, and makes no network
-    requests. We do not use analytics, advertising, crash-reporting, or tracking
-    of any kind.
-  </p>
+  <div style="max-width: 760px; margin: -48px auto 0; padding: 0 24px 96px;">
+    <div style="background: var(--sheet); border: 1px solid var(--line); border-radius: 24px; padding: clamp(28px, 5vw, 56px); display: flex; flex-direction: column; gap: 44px;">
 
-  <h2>Your data stays on your device</h2>
-  <p>
-    All tasks and reminders you create are stored <strong>only on your device</strong>.
-    This data never leaves your phone and is never sent to us or to any third party.
-    If you uninstall the App, this data is removed with it. You can delete any
-    individual task — or all of your tasks — at any time from within the App.
-  </p>
+      <div style="display: flex; flex-direction: column; gap: 18px;">
+        <p style="font-size: 19px; line-height: 1.55; letter-spacing: -0.011em;">This Privacy Policy explains how the <strong>Tick</strong> app (package name <code style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.85em; background: var(--variant); padding: 2px 6px; border-radius: 6px;">dev.mariam.schedulereminder</code>, the &ldquo;App&rdquo;) handles your information. Your privacy matters.</p>
+        <div style="background: var(--variant); border-radius: 16px; padding: 20px 22px; display: flex; flex-direction: column; gap: 6px;">
+          <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted);">In short</span>
+          <span style="font-size: 17px; font-weight: 600; letter-spacing: -0.012em;">The App collects no personal data and works entirely offline.</span>
+        </div>
+      </div>
 
-  <h2>Permissions</h2>
-  <p>
-    To deliver your reminders at the exact time you choose, the App uses Android
-    alarm and notification permissions:
-  </p>
-  <ul>
-    <li><strong>Alarms &amp; reminders (exact alarms):</strong> used to trigger your reminders at the precise scheduled time.</li>
-    <li><strong>Notifications:</strong> used to display a reminder when a task is due.</li>
-  </ul>
-  <p>
-    These permissions are used solely to show your reminders on time and for no
-    other purpose. They are not used to collect or transmit any information.
-  </p>
+      <section>
+        <h2>Information we collect</h2>
+        <p>We do <strong>not</strong> collect, store, transmit, or share any personal information. The App has no account system and no sign-in. It does not request the Android internet permission and makes no network connections of its own. We do not use analytics, advertising, crash-reporting, or tracking of any kind.</p>
+      </section>
 
-  <h2>Third-party services</h2>
-  <p>
-    The App does not integrate any third-party SDKs, advertising networks, or
-    analytics services. Note that Google Play itself may collect certain
-    information when you download or update the App; that data is governed by
-    Google&rsquo;s own privacy policy, not this one.
-  </p>
+      <section>
+        <h2>Your data stays on your device</h2>
+        <p>All tasks and reminders you create are stored <strong>only on your device</strong>. This data never leaves your phone and is never sent to us or to any third party. If you uninstall the App, this data is removed with it. You can delete any individual task — or all of your tasks — at any time from within the App.</p>
+        <p>Your tasks are also excluded from Android cloud backup and from device-to-device transfer, so they are never copied off your phone — not even by the system.</p>
+      </section>
 
-  <h2>Children&rsquo;s privacy</h2>
-  <p>
-    The App does not collect personal data from anyone, including children. It
-    contains no ads and no content unsuitable for a general audience.
-  </p>
+      <section>
+        <h2>Permissions</h2>
+        <p>To deliver your reminders at the exact time you choose, the App uses Android alarm and notification permissions:</p>
+        <div style="display: grid; gap: 10px; margin-top: 6px;">
+          <div style="border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 15px; font-weight: 600; letter-spacing: -0.01em;">Alarms &amp; reminders (exact alarms)</span>
+            <span style="font-size: 15px; color: var(--muted);">Used to trigger your reminders at the precise scheduled time.</span>
+          </div>
+          <div style="border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 15px; font-weight: 600; letter-spacing: -0.01em;">Notifications</span>
+            <span style="font-size: 15px; color: var(--muted);">Used to display a reminder when a task is due.</span>
+          </div>
+          <div style="border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 15px; font-weight: 600; letter-spacing: -0.01em;">Run at startup</span>
+            <span style="font-size: 15px; color: var(--muted);">Android clears all scheduled alarms when your phone restarts or the App updates. This permission lets the App re-schedule your existing reminders afterwards so none are silently lost. Nothing runs in the background otherwise.</span>
+          </div>
+        </div>
+        <p style="margin-top: 6px;">These permissions are used solely to show your reminders on time and for no other purpose. They are not used to collect or transmit any information.</p>
+      </section>
 
-  <h2>Changes to this policy</h2>
-  <p>
-    If this policy changes, the updated version will be posted on this page with
-    a revised &ldquo;Last updated&rdquo; date.
-  </p>
+      <section>
+        <h2>Third-party services</h2>
+        <p>The App integrates no advertising networks and no analytics or crash-reporting services. It includes one Google library, <strong>Play In-App Review</strong>, used solely to show the Play Store&rsquo;s own &ldquo;rate this app&rdquo; prompt. The prompt is displayed and handled by the Google Play Store app; the App itself sends nothing and receives nothing about you, and any communication during that flow is governed by Google&rsquo;s privacy policy.</p>
+        <p>Google Play may likewise collect certain information when you download or update the App. That data is also governed by Google&rsquo;s own privacy policy, not this one.</p>
+        <p>Opening the support email or a link from the App&rsquo;s settings hands off to your own email or browser app; what happens there is governed by that app&rsquo;s policy.</p>
+      </section>
 
-  <h2>Contact</h2>
-  <p>
-    If you have any questions about this Privacy Policy, contact:
-    <a href="mailto:mariamikv71@gmail.com">supporttick@gmail.com</a>
-  </p>
+      <section>
+        <h2>Children&rsquo;s privacy</h2>
+        <p>The App does not collect personal data from anyone, including children. It contains no ads and no content unsuitable for a general audience.</p>
+      </section>
 
-  <footer>
-    &copy; 2026 Tick. This app collects no data and works fully offline.
-  </footer>
+      <section>
+        <h2>Changes to this policy</h2>
+        <p>If this policy changes, the updated version will be posted on this page with a revised &ldquo;Last updated&rdquo; date.</p>
+      </section>
+
+      <section style="border-top: 1px solid var(--line); padding-top: 36px; gap: 14px;">
+        <h2>Contact</h2>
+        <p>Questions about this Privacy Policy? Write to <a href="mailto:supporttick@gmail.com" style="font-weight: 600;">supporttick@gmail.com</a></p>
+      </section>
+
+    </div>
+
+    <p style="margin: 28px 4px 0; font-size: 13px; color: var(--muted);">&copy; 2026 Tick. This app collects no data and works fully offline.</p>
+  </div>
+</div>
 </body>
 </html>
